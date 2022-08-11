@@ -67,7 +67,7 @@ async def feeds():
                         k = data
 
                 db['latest'] = anime_name
-                await bot.send_message(-1001598501303, f"**{anime_name}** **Ep**: {ep}:\n\n{k}" , parse_mode="markdown")
+                await bot.send_message(-1001598501303, f"**{anime_name}** **Ep**: {ep}:\n\n{k}")
                 print(db)
                 time.sleep(300)
 
