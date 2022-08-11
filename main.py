@@ -69,7 +69,7 @@ async def feeds():
                         k = data
 
                 db['latest'] = anime_name
-                await bot.reply_photo(url)
+                await bot.send_photo(url)
                 await bot.send_message(-1001598501303, f"**{anime_name}** \n\n**Release Date** - {rd}\n**Episode** - {ep}:\n\n{k}")
                 print(db)
                 time.sleep(300)
