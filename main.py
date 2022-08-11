@@ -41,6 +41,8 @@ async def feeds():
 
             anime_name = res[kek[0]]['show']
             ep = res[kek[0]]['episode']
+            release Date = res[kek[0]]['release Date']
+            url = res[kek[0]]['image_url']
 
 
 
@@ -67,7 +69,8 @@ async def feeds():
                         k = data
 
                 db['latest'] = anime_name
-                await bot.send_message(-1001598501303, f"**{anime_name}** **Ep**: {ep}:\n\n{k}")
+                await bot.reply_photo(url)
+                await bot.send_message(-1001598501303, f"**{anime_name}** \n\n**Release Date** - {release_date}**Ep**: {ep}:\n\n{k}")
                 print(db)
                 time.sleep(300)
 
